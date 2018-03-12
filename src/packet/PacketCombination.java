@@ -2,6 +2,11 @@ package packet;
 
 import java.util.Map;
 
+/**
+ * 전달받은 패킷을 완성시키는 클래스
+ * @author jonghyeon
+ *
+ */
 public class PacketCombination {
 	
 	private int totalCount;
@@ -11,6 +16,11 @@ public class PacketCombination {
 		this.totalCount = totalCount;
 	}
 	
+	/**
+	 * 패킷을 추가한다.
+	 * @param simplePacket
+	 * @throws PacketException
+	 */
 	public void add(SimplePacket simplePacket) throws PacketException {
 		if (simplePacketMap.containsKey(simplePacket.getHeader().getSequencyNumber())) {
 			// 같은 패킷순서가 이미 존재하면
@@ -20,7 +30,11 @@ public class PacketCombination {
 		simplePacketMap.put(simplePacket.getHeader().getSequencyNumber(), simplePacket);
 	}
 	
-	public SimplePacket getCompletetSimplePacket() {
+	/**
+	 * 완성된 패킷을 반환한다.
+	 * @return
+	 */
+	public SimplePacket getCompletedSimplePacket() {
 		if (simplePacketMap.size() == 1) {
 			return simplePacketMap.get("1");
 		} else {
@@ -45,6 +59,10 @@ public class PacketCombination {
 		}
 	}
 	
+	/**
+	 * 패킷이 완성되었는지 확인한다.
+	 * @return
+	 */
 	public boolean isComplete() {
 		if (totalCount == simplePacketMap.size()) {
 			return true;

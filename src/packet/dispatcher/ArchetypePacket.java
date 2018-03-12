@@ -1,5 +1,10 @@
 package packet.dispatcher;
 
+/**
+ * 패킷 원형
+ * @author jonghyeon
+ *
+ */
 public interface ArchetypePacket {
 	
 	/**

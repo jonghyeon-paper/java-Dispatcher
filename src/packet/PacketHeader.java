@@ -1,5 +1,10 @@
 package packet;
 
+/**
+ * 패킷 헤더
+ * @author jonghyeon
+ *
+ */
 public class PacketHeader {
 	
 	private Integer packetNumber;

@@ -1,5 +1,10 @@
 package packet;
 
+/**
+ * 약식패킷
+ * @author jonghyeon
+ *
+ */
 public class SimplePacket {
 	
 	private PacketHeader header;

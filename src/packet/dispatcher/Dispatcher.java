@@ -2,6 +2,13 @@ package packet.dispatcher;
 
 import packet.SimplePacket;
 
+/**
+ * 약식 패킷을 전당받아 패킷정보를 확인한다.
+ * 패킷의 데이터를 오브젝트화 한다.
+ * 데이터 오브젝트를 어떻게 사용할 지 결정한다.
+ * @author jonghyeon
+ *
+ */
 public class Dispatcher {
 	
 	private static Dispatcher instance;
@@ -40,7 +47,7 @@ public class Dispatcher {
 		}
 		newPacket.deserialize(simplePacket.getBody());
 		
-		// TODO 변환된 패킷을 필요한 곳에 사용한다~(내부사용, 인스턴스 호출, 쓰레드 실행, 기타등등)
+		// TODO 변환된 패킷을 필요한 곳에 사용한다(내부사용, 인스턴스 호출, 쓰레드 실행, 기타등등)
 		return newPacket;
 	}
 }
