@@ -1,4 +1,4 @@
-package packet.dispatcher.sample;
+package packet.sample;
 
 import packet.dispatcher.ArchetypePacket;
 

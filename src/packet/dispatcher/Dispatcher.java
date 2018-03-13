@@ -31,7 +31,7 @@ public class Dispatcher {
 		// 리플렉션을 사용해 객체를 생성하고 있지만, 그냥 패킷 번호를 비교하는 로직을 사용해도 된다.
 		Class<?> target = null;
 		try {
-			target = Class.forName("packet.dispatcher.sample.Packet" + packetNumber);
+			target = Class.forName("packet.sample.Packet" + packetNumber);
 		} catch (ClassNotFoundException e) {
 			throw new DispatcherException("패킷객체가 없습니다.");
 		}
